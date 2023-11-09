@@ -1,6 +1,6 @@
 {
   "name": "qiniu-webpack-plugin",
-  "version": "0.4.2",
+  "version": "1.0.1",
   "description": "Webpack plugin for Qiniu cloud storage",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "compile": "rimraf example/public && rimraf lib && babel src --copy-files --source-maps --out-dir lib",
     "example:dev": "npm run-script compile && webpack -d --config example/webpack.dev.js",
     "example:production": "npm run-script compile && NODE_ENV=production webpack -p --config example/webpack.production.js",
-    "eslint": "eslint src",
+    "eslint": "eslint src -fix",
     "test:coveralls": "npm run test && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "test": "jest"
   },
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wyvernnot/qiniu-webpack-plugin.git"
+    "url": "git+https://github.com/erdongjun/qiniu-webpack-v5-plugin.git"
   },
   "keywords": [
     "qiniu",
@@ -31,9 +31,9 @@
   "author": "wyvernnot",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wyvernnot/qiniu-webpack-plugin/issues"
+    "url": "https://github.com/erdongjun/qiniu-webpack-v5-plugin/issues"
   },
-  "homepage": "https://github.com/wyvernnot/qiniu-webpack-plugin#readme",
+  "homepage": "https://github.com/erdongjun/qiniu-webpack-v5-plugin#readme",
   "dependencies": {
     "promise": "^7.1.1",
     "qiniu": "^6.1.9",
@@ -62,6 +62,7 @@
     "react-dom": "^15.4.1",
     "rimraf": "^2.5.2",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.14"
+    "webpack-cli": "^5.1.4",
+    "webpack": "^5.89.0"
   }
 }
